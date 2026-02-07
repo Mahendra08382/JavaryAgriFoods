@@ -1,1 +1,1 @@
-# JavaryAgriFoods
+# JavariAgriFoods
