@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 EMAIL_SENDER = "javaryagrifoods@gmail.com"
-EMAIL_PASSWORD = "your_app_password_here"
+EMAIL_PASSWORD = "ltlm dkvr otxe kocp"
 EMAIL_RECEIVER = "javaryagrifoods@gmail.com"
 WHATSAPP_NUMBER = "918549939928"
 
@@ -545,7 +545,7 @@ if st.session_state.cart:
 
     st.info("📡 **Notification Method** — Choose how we receive your order")
     notify_method = st.radio("method",
-        ["📧 Email (Recommended)", "💬 WhatsApp via CallMeBot (Free)"],
+        ["📧 Email (Recommended)", "💬 WhatsApp"],
         index=0, label_visibility="collapsed")
     st.divider()
 
