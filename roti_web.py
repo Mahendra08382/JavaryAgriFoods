@@ -3,7 +3,7 @@ from PIL import Image
 
 
 # Set page configuration
-st.set_page_config(page_title="Ozone Rotis", page_icon="🥘", layout="wide")
+st.set_page_config(page_title="Javay Agri Products", page_icon="🥘", layout="wide")
 
 st.markdown("""
     <style>
@@ -59,7 +59,7 @@ st.image(banner, use_container_width=True)
 
 
 # Title and tagline
-st.markdown("## 🫓 **Welcome to Ozone Roti Center** – Organic Fresh. Soft. Delicious.")
+st.markdown("## 🫓 **Welcome to Javary Agri Foods Products** – Organic Fresh. Soft. Delicious.")
 st.markdown("<hr>", unsafe_allow_html=True)
 
 # Menu Section
@@ -105,6 +105,6 @@ st.markdown("<hr>", unsafe_allow_html=True)
 st.markdown("### 📞 Contact Us")
 st.write("📍 Habbu Complex , Habbuwada Karwar - 581301")
 st.write("📱 Phone: +91-8549939928")
-st.write("📧 Email: ozonerotis@gmail.com")
+st.write("📧 Email: javaryagrifoods@gmail.com")
 
 st.markdown("##### Follow us on [Instagram](https://instagram.com) | [Facebook](https://facebook.com)")
