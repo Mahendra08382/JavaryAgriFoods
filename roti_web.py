@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 EMAIL_SENDER = "javaryagrifoods@gmail.com"
-EMAIL_PASSWORD = "your_app_password_here"
+EMAIL_PASSWORD = "ltlm dkvr otxe kocp"
 EMAIL_RECEIVER = "javaryagrifoods@gmail.com"
 WHATSAPP_NUMBER = "918549939928"
 
