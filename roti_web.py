@@ -91,6 +91,7 @@ def toggle_cart():
 
 # ===== CSS =====
 st.markdown("""
+<style>
 /* ===== REMOVE ALL STREAMLIT BRANDING ===== */
 
 /* Hide "Made with Streamlit" footer */
