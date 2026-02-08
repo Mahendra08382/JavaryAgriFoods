@@ -91,33 +91,51 @@ def toggle_cart():
 
 # ===== CSS =====
 st.markdown("""
-<style>
-/* REMOVE ALL STREAMLIT BRANDING */ 
-footer,
-header,
-#MainMenu,
-.stDeployButton,
-[data-testid="stHeader"],
-[data-testid="stToolbar"],
-[data-testid="stDecoration"],
-[data-testid="stStatusWidget"],
-[data-testid="manage-app-button"],
-[data-testid="stDeployButton"],
-.viewerBadge_container__r5tak,
-.viewerBadge_link__qRIco,
-iframe[title="streamlit_badge"] {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    width: 0 !important;
-    overflow: hidden !important;
-}
+/* ===== REMOVE ALL STREAMLIT BRANDING ===== */
 
-.block-container {
-    padding-bottom: 0 !important;
-}
+/* Hide "Made with Streamlit" footer */
+footer { display: none !important; visibility: hidden !important; }
 
-/* ... rest of your existing CSS below ... */
+/* Hide Streamlit footer container */
+.reportview-container .main footer { display: none !important; }
+
+/* Hide footer via data attribute */
+footer[class*="st-"] { display: none !important; }
+
+/* Hide "Manage app" button */
+.stApp [data-testid="manage-app-button"] { display: none !important; }
+
+/* Hide Streamlit header bar */
+header { display: none !important; visibility: hidden !important; }
+header[data-testid="stHeader"] { display: none !important; }
+
+/* Hide hamburger menu */
+#MainMenu { display: none !important; visibility: hidden !important; }
+button[kind="header"] { display: none !important; }
+
+/* Hide deploy button */
+.stDeployButton { display: none !important; }
+[data-testid="stDeployButton"] { display: none !important; }
+
+/* Hide Streamlit toolbar */
+[data-testid="stToolbar"] { display: none !important; }
+
+/* Hide "Hosted with Streamlit" */
+[data-testid="stDecoration"] { display: none !important; }
+
+/* Hide status widget (running/rerunning) */
+[data-testid="stStatusWidget"] { display: none !important; }
+
+/* Hide any remaining Streamlit footer text */
+.viewerBadge_container__r5tak { display: none !important; }
+.viewerBadge_link__qRIco { display: none !important; }
+
+/* Extra safety - hide anything at page bottom from Streamlit */
+iframe[title="streamlit_badge"] { display: none !important; }
+
+/* Remove bottom padding that Streamlit adds for footer */
+.block-container { padding-bottom: 0 !important; }
+.main .block-container { padding-bottom: 0 !important; }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
