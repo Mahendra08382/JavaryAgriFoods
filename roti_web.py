@@ -92,6 +92,37 @@ def toggle_cart():
 # ===== CSS =====
 st.markdown("""
 <style>
+/* REMOVE ALL STREAMLIT BRANDING */
+footer,
+header,
+#MainMenu,
+.stDeployButton,
+[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"],
+[data-testid="manage-app-button"],
+[data-testid="stDeployButton"],
+.viewerBadge_container__r5tak,
+.viewerBadge_link__qRIco,
+iframe[title="streamlit_badge"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+.block-container {
+    padding-bottom: 0 !important;
+}
+
+/* ... rest of your existing CSS below ... */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* { font-family: 'Poppins', sans-serif; box-sizing: border-box; }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * { font-family: 'Poppins', sans-serif; box-sizing: border-box; }
