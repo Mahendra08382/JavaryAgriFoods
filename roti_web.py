@@ -92,7 +92,7 @@ def toggle_cart():
 # ===== CSS =====
 st.markdown("""
 <style>
-/* REMOVE ALL STREAMLIT BRANDING */
+/* REMOVE ALL STREAMLIT BRANDING */ 
 footer,
 header,
 #MainMenu,
