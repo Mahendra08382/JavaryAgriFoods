@@ -43,7 +43,7 @@ products_data = [
      "image": r"C:\Users\2025\JavaryAgriFoods\images\roti_banner.jpg", "emoji": "📦", "rating": 4.9, "reviews": 89},
      {"name": "GroundNut Chatney Powder", "price": 60, "original_price": 75, "unit": "Pack of 1",
      "desc": "Premium quality groundnut chatney powder", "badge": "Bestseller", "badge_color": "#9c27b0",
-     "image": "images/groundnut.jpeg", "emoji": "🫓", "rating": 4.9, "reviews": 128},
+     "image": "images/Groundnut.jpeg", "emoji": "🫓", "rating": 4.9, "reviews": 128},
 ]
 
 def send_order_email(order_msg, customer_name, customer_phone):
