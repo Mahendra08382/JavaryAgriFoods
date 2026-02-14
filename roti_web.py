@@ -4,6 +4,8 @@ import smtplib
 import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import requests
+
 
 st.set_page_config(
     page_title="Javary Agri Foods",
@@ -16,6 +18,9 @@ EMAIL_SENDER = "javaryagrifoods@gmail.com"
 EMAIL_PASSWORD = "ltlm dkvr otxe kocp"
 EMAIL_RECEIVER = "javaryagrifoods@gmail.com"
 WHATSAPP_NUMBER = "918549939928"
+ULTRAMSG_INSTANCE = "instance161964"
+ULTRAMSG_TOKEN = "o0xkeic6pp9927wj"
+
 
 if "cart" not in st.session_state:
     st.session_state.cart = {}
@@ -63,15 +68,22 @@ def send_order_email(order_msg, customer_name, customer_phone):
         st.error(f"Email error: {e}")
         return False
 
-def send_whatsapp_callmebot(order_msg):
-    import requests
-    CALLMEBOT_API_KEY = "YOUR_API_KEY_HERE"
-    url = f"https://api.callmebot.com/whatsapp.php?phone={WHATSAPP_NUMBER}&text={urllib.parse.quote(order_msg)}&apikey={CALLMEBOT_API_KEY}"
+def send_whatsapp_ultramsg(order_msg):
+    url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE}/messages/chat"
+
+    payload = {
+        "token": ULTRAMSG_TOKEN,
+        "to": f"+{WHATSAPP_NUMBER}",
+        "body": order_msg
+    }
+
     try:
-        return requests.get(url, timeout=30).status_code == 200
+        r = requests.post(url, data=payload, timeout=15)
+        return r.status_code == 200
     except Exception as e:
-        st.error(f"CallMeBot error: {e}")
+        st.error(f"WhatsApp API error: {e}")
         return False
+
 
 def increase_qty(name, price, unit):
     key = f"qty_{name}"
@@ -674,7 +686,7 @@ if st.session_state.cart:
                 if "Email" in notify_method:
                     with st.spinner("📧 Sending..."): ok = send_order_email(order_msg, cust_name, cust_phone)
                 else:
-                    with st.spinner("💬 Sending..."): ok = send_whatsapp_callmebot(order_msg)
+                    with st.spinner("💬 Sending..."): ok = send_whatsapp_ultramsg(order_msg)
 
                 if ok:
                     st.markdown(f"""
