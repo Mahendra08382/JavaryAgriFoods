@@ -41,6 +41,9 @@ products_data = [
     {"name": "Family Combo Meal", "price": 199, "original_price": 280, "unit": "Serves 4",
      "desc": "Assorted rotis + chapatis + sweet", "badge": "Best Value", "badge_color": "#2e7d32",
      "image": r"C:\Users\2025\JavaryAgriFoods\images\roti_banner.jpg", "emoji": "📦", "rating": 4.9, "reviews": 89},
+     {"name": "GroundNut Chatney Powder", "price": 60, "original_price": 75, "unit": "Pack of 1",
+     "desc": "Premium quality groundnut chatney powder", "badge": "Bestseller", "badge_color": "#9c27b0",
+     "image": r"C:\Users\2025\JavaryAgriFoods\images\groundnut.jpeg", "rating": 4.9, "reviews": 128},
 ]
 
 def send_order_email(order_msg, customer_name, customer_phone):
@@ -526,7 +529,7 @@ for i, prod in enumerate(products_data):
         """, unsafe_allow_html=True)
 
         if prod["image"] and os.path.isfile(prod["image"]):
-            st.image(prod["image"], use_container_width=True)
+            st.image(prod["image"], use_container_width=False)
         else:
             st.markdown(f'<div class="p-emoji-area"><span class="p-emoji">{prod["emoji"]}</span></div>', unsafe_allow_html=True)
 
